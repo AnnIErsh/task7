@@ -67,6 +67,7 @@
     self.login.layer.borderColor = color.CGColor;
     self.login.layer.borderWidth = 1.5;
     self.login.layer.cornerRadius = 5;
+    self.login.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.login.userInteractionEnabled = YES;
 }
 
