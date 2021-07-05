@@ -45,6 +45,7 @@
         forControlEvents: UIControlEventEditingDidBegin];
         }
     }
+    self.secureContainerView.layer.borderColor = [UIColor clearColor].CGColor;
     self.secureContainerView.hidden = YES;
     [self subscribeOnKeyboardEvents];
 }
@@ -278,7 +279,7 @@
 - (BOOL)authorizeComfigurationCheck:(UITextField *)text withData:(NSString *)dataText{
     BOOL check = NO;
     UIColor *colorWrong = [UIColor colorWithRed:0.76 green:0.00 blue:0.08 alpha:1.00];
-    UIColor *colorRight = [UIColor colorWithRed:0.3 green:0.36 blue:0.41 alpha:1.0];
+    UIColor *colorRight = [UIColor colorWithRed: 0.57 green: 0.78 blue: 0.69 alpha: 1.00];
     if (![text.text isEqualToString: dataText])
     {
         text.layer.borderColor = colorWrong.CGColor;
