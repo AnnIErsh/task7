@@ -359,4 +359,16 @@
     return YES;
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if ([textField isEqual:self.login])
+    {
+        NSString* regex = @"[A-Za-z]+";
+        if ([string rangeOfString:regex options:NSRegularExpressionSearch].location != NSNotFound)
+            return YES;
+        else
+            return NO;
+    }
+    return YES;
+};
+
 @end
